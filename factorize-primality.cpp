@@ -708,19 +708,11 @@ static inline __m128d _FastIntegerSqrtInternal_I64ToSd(I64 x)
 {
 #ifdef __clang__
     __m128d v;
-#ifdef __AVX__
     asm("vxorpd %[v], %[v], %[v]\n\
          vcvtsi2sd %[x], %[v], %[v]"
         : [v] "=x" (v)
         : [x] "r" (x)
     );
-#else
-    asm("xorpd %[v], %[v]\n\
-         cvtsi2sd %[x], %[v]"
-        : [v] "=x" (v)
-        : [x] "r" (x)
-    );
-#endif
     return v;
 #else
     return _mm_cvtsi64_sd(_mm_setzero_pd(), x);
