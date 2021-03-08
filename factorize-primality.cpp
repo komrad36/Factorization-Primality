@@ -1683,7 +1683,7 @@ FactorizeResult32 Factorize(U32 x)
         ret.Insert(2, e);
     }
 
-    if (x == 1)
+    if (x <= 1)
         return ret;
 
     const __m256i vX = _mm256_set1_epi32(I32(x));
