@@ -35,7 +35,7 @@ bool IsPrime(uint64_t x);
 ///  Factorization
 ///////////////////////////////
 
-// querying any integer is supported; queries of 0 or 1 return no factors
+// the behavior of factoring 0 or 1 is undefined
 
 struct FactorInfo32
 {
