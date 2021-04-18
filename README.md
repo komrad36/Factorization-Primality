@@ -4,14 +4,14 @@ Fastest single-file factorization and primality testing for 32-bit and 64-bit in
 
 Primality testing:
 
-```
+```cpp
 bool IsPrime(U32 x);
 bool IsPrime(U64 x);
 ```
 
 Factorization:
 
-```
+```cpp
 FactorizeResult32 Factorize(U32 x);
 FactorizeResult64 Factorize(U64 x);
 ```
