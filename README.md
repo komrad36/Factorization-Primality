@@ -17,3 +17,5 @@ FactorizeResult64 Factorize(U64 x);
 ```
 
 Up to about 2<sup>38</sup>, it is possible to test for primality even faster if you're okay with consuming a bunch of memory, using a fast prime sieve. See https://github.com/komrad36/PrimeSieve
+
+For BigInts - integers larger than a machine word (32 or 64 bits), see https://github.com/komrad36/EllipticCurveFactorization.
