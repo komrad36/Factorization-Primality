@@ -1135,12 +1135,12 @@ public:
         return Mul(x, x);
     }
 
-    M32 ToKform(U32 x) const
+    M32 ToM32(U32 x) const
     {
         return x;
     }
 
-    U32 FromKform(M32 x) const
+    U32 ToU32(M32 x) const
     {
         return x.m_x;
     }
@@ -1393,7 +1393,7 @@ private:
 
 static inline bool SPRP(const ModularSystem32& ms, U32 base, U32 q, U32 e)
 {
-    M32 b = ms.ToKform(base);
+    M32 b = ms.ToM32(base);
     M32 m = b;
     q >>= 1;
 
