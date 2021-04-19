@@ -1127,7 +1127,7 @@ public:
 
     M32 Mul(M32 x, M32 y) const
     {
-        return Kmod(U64(x.m_x) * U64(y.m_x));
+        return InternalMod(U64(x.m_x) * U64(y.m_x));
     }
 
     M32 Sqr(M32 x) const
@@ -1176,7 +1176,7 @@ public:
     }
 
 private:
-    U32 Kmod(U64 x) const
+    U32 InternalMod(U64 x) const
     {
         U64 M = MulHi64(x, m_M);
         x += M * m_D;
